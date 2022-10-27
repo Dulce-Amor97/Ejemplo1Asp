@@ -1,0 +1,36 @@
+﻿@model Ejemplo1Asp.Services.Calculos
+
+@{
+    ViewBag.Title = "Sumar";
+}
+
+<h1>CALCULADORA</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <form action="/" method="post">
+                <!-- action = "/" vuelve a cargar en la pagina donde esta -->
+                <label for="Numero1">Número 1</label>
+                <input type="text" name="Numero1" value="" />
+                <br />
+                <label for="Numero2">Número 2</label>
+                <input type="text" name="Numero2" value="" />
+                <br />
+
+                <!-- get = envia un paquete de datos que incluye la url y los campos, post = me manda dos paquetes, uno con la inforrmacion -->
+                <label for="r1">Sumar: </label>
+                <input type="radio" id="r1" name="r1" value="Sumar" />
+                <label for="r2">Restar: </label>
+
+                <input type="radio" id="r1" name="r1" value="Restar" />
+                <hr />
+                <input type="submit" value="Calcular" />
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <h1>
+               La suma es: @ViewBag.res
+            </h1>
+        </div>
+    </div>
+</div>  

@@ -1,0 +1,37 @@
+﻿
+@model List<Ejemplo1Asp.Models.Peliculas>
+@{
+    ViewBag.Title = "MuestraPeliculas";
+}
+
+<h2>MuestraPeliculas</h2>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>MuestraPeliculas</title>
+</head>
+<body>
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <th>Titulo</th>
+                <th>Duración</th>
+                <th>País</th>
+                <th>Lanzamiento</th>
+            </thead>
+                <tbody>
+                    @foreach (var pelicula in Model) //recorrer el arreglo, la lista
+                    {
+                        <tr>
+                            <td>@pelicula.Titulo</td>
+                            <td>@pelicula.Duracion</td>
+                            <td>@pelicula.Pais</td>
+                            <td>@pelicula.Publicacion.ToString("dd/MM/yyyy")</td>
+                        </tr>
+                    }
+
+                </tbody>
+        </table>
+    </div>
+</body>
+</html>
